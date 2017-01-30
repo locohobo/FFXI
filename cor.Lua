@@ -170,6 +170,8 @@ function init_gear_sets()
 	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {legs="Samnuha Tights"})
 
 	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {ear2="Moonshade Earring", legs="Samnuha Tights"})
+	
+	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {neck="Lissome Necklace"})
 
 	sets.precast.WS['Last Stand'] = set_combine(sets.precast.WS, {
         ammo=gear.WSbullet,
@@ -187,7 +189,7 @@ function init_gear_sets()
     head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','Mag. Acc.+15',}},
     body={ name="Herculean Vest", augments={'STR+5','Weapon skill damage +4%','Quadruple Attack +2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
     hands="Carmine Fin. Ga. +1",
-    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','STR+15','Mag. Acc.+13',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Pet: Accuracy+27 Pet: Rng. Acc.+27','Accuracy+20 Attack+20','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
     feet={ name="Herculean Boots", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Store TP"+1',}},
     neck="Sanctity Necklace",
     waist="Eschan Stone",
@@ -195,7 +197,7 @@ function init_gear_sets()
     right_ear="Friomisi Earring",
     left_ring="Garuda Ring +1",
     right_ring="Dingir Ring",
-    back={ name="Camulus's Mantle", augments={'AGI+30','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
     }
 
 	sets.precast.WS['Leaden Salute'] = set_combine(sets.precast.WS['Wildfire'], {head="Pixie Hairpin +1", left_ring="Archon Ring"})
@@ -220,7 +222,7 @@ function init_gear_sets()
     head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','Mag. Acc.+15',}},
     body={ name="Herculean Vest", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Store TP"+5','INT+8','"Mag.Atk.Bns."+13',}},
     hands="Carmine Fin. Ga. +1",
-    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+24','"Dbl.Atk."+1','STR+15','Mag. Acc.+13',}},
+    legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Pet: Accuracy+27 Pet: Rng. Acc.+27','Accuracy+20 Attack+20','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
     feet="Chass. Bottes +1",
     neck="Sanctity Necklace",
     waist="Eschan Stone",
@@ -269,7 +271,8 @@ function init_gear_sets()
 	 back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
     }
 	
-	
+	if buffactive['Triple Shot'] then set_combine(sets.midcast.RA,{body = "Chasseur's Frac +1"})
+	end
 	
 				
 	-- Engaged sets
@@ -283,7 +286,7 @@ function init_gear_sets()
         ammo=gear.RAbullet,
         head="Meghanada Visor +1",
     body="Meg. Cuirie +1",
-    hands="Meg. Gloves +1",
+    hands="Adhemar Wristbands",
     legs="Carmine Cuisses +1",
     feet="Meg. Jam. +1",
     neck="Sanctity Necklace",
@@ -300,25 +303,25 @@ function init_gear_sets()
 	sets.engaged.Melee = {
         ammo=gear.RAbullet,
         head="Meghanada Visor +1",
-    body="Meg. Cuirie +1",
-    hands="Meg. Gloves +1",
+    body="Adhemar Jacket",
+    hands="Adhemar Wristbands",
     legs="Carmine Cuisses +1",
     feet="Meg. Jam. +1",
-    neck="Sanctity Necklace",
+    neck="Lissome Necklace",
     waist="Kentarch Belt +1",
     left_ear="Bladeborn Earring",
     right_ear="Steelflash Earring",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
-	back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+22 Rng.Atk.+20','"Store TP"+7',}}
+	back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}}
     } 
 
 	sets.engaged.DW = set_combine(sets.engaged.Melee, {
         head="Meghanada Visor +1",
-        ear1="Dudgeon Earring",
-        ear2="Heartseeker Earring",
+        ear1="Suppanomini",
+        ear2="Mache Earring",
         hands="Floral Gauntlets",
-        body="Samnuha Coat",
+        body="Adhemar Jacket",
         legs="Carmine Cuisses +1",
         waist="Kentarch Belt +1",
 		left_ring="Haverton Ring",
@@ -361,9 +364,6 @@ function job_precast(spell, action, spellMap, eventArgs)
             eventArgs.handled = true
         end
 	end
-	if buffactive['Triple Shot'] then equip({body = "Chasseur's Frac +1"})
-	end
-	
 end
 
 function job_post_precast(spell, action, spellMap, eventArgs)
