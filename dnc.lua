@@ -64,7 +64,7 @@ function user_setup()
 
 
     gear.default.weaponskill_neck = "Caro Necklace"
-    gear.default.weaponskill_waist = "Grunfield Rope"
+    gear.default.weaponskill_waist = "Grunfeld Rope"
 
     -- Additional local binds
     send_command('bind ^= gs c cycle mainstep')
@@ -108,7 +108,7 @@ function init_gear_sets()
     sets.precast.Waltz = {ammo="Sonia's Plectrum",
         ammo="yamarang",
 		head="Horos Tiara",ear1="Handler's Earring",
-        body="Maxixi Casaque",feet="Maxixi Toe Shoes"}
+        body="Maxixi Casaque +1",feet="Maxixi Toe Shoes"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
@@ -123,9 +123,9 @@ function init_gear_sets()
     sets.precast.Flourish1 = {}
     sets.precast.Flourish1['Violent Flourish'] = {neck="Sanctity Necklace",
         body="Horos Casaque",hands="Buremte Gloves",ring2="Metamorph Ring",
-        feet={name="Herculean Boots", augments={'"Mag.Atk.Bns."+25','Crit. hit damage +2%','INT+4','Mag. Acc.+11',}}} -- magic accuracy
+        feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','STR+2','Mag. Acc.+5','"Mag.Atk.Bns."+11',}}} -- magic accuracy
     sets.precast.Flourish1['Desperate Flourish'] = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Sanctity Necklace",
+        neck="Sanctity Necklace",
         body="Horos Casaque",
         waist="Kentarch Belt +1"} -- acc gear
 
@@ -134,7 +134,7 @@ function init_gear_sets()
 
     sets.precast.Flourish3 = {}
     sets.precast.Flourish3['Striking Flourish'] = {body="Charis Casaque +2"}
-    sets.precast.Flourish3['Climactic Flourish'] = {head="Maculele Tiara"}
+    sets.precast.Flourish3['Climactic Flourish'] = {head="Maculele Tiara +1"}
 
        
     -- Weaponskill sets
@@ -143,24 +143,24 @@ function init_gear_sets()
         head="Dampening Tam",
 		neck="Caro Necklace",
 		ear1="Brutal Earring",ear2="Mache Earring",
-        body="Meg. Cuirie +1",
+        body="Adhemar Jacket",
 		hands="Meg. Gloves +1",
 		ring1="Rajas Ring",ring2="Epona's Ring",
         back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-		waist="Grunfield Rope",
+		waist="Grunfeld Rope",
 		legs="Lustr. Subligar +1",
-		feet={ name="Herculean Boots", augments={'Attack+21','"Triple Atk."+1','DEX+10','Accuracy+9',}}}
+		feet={ name="Herculean Boots", augments={'DEX+7','Accuracy+11','STR+6 DEX+6','Accuracy+11 Attack+11',}}}
     
     
      -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 
-		sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {ring1="Garuda's Ring +1", ring2="Apatate Ring", waist="Foitia Belt"})
+		sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {ring1="Garuda Ring +1", ring2="Apate Ring", waist="Fotia Belt"})
 	
-		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", ear1="Ishvara Earring",ring2="Apatate Ring"})
+		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", ear1="Ishvara Earring",ring2="Apate Ring"})
 		
-		sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {neck="Foitia Gorget", belt="Foitia Belt"})
+		sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {hands="Adhemar Wristbands", neck="Fotia Gorget", belt="Fotia Belt"})
 		
-		sets.precast.WS['Phyrrhic Kleos'] = set_combine(sets.precast.WS, {belt="Foitia Belt", ring2="Apatate Ring"})
+		sets.precast.WS['Phyrrhic Kleos'] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", nack="Fotia Gorget", feet="Lustratio Leggings", hands="Adhemar Wristbands", belt="Fotia Belt", ring2="Apate Ring", ammo="Floestone"})
     
     
     
@@ -179,10 +179,10 @@ function init_gear_sets()
     sets.engaged = 
 	{ ammo="Yamarang",
     head="Dampening Tam",
-    body={ name="Herculean Vest", augments={'Attack+28','Crit.hit rate+4','DEX+9','Accuracy+4',}},
-    hands={ name="Herculean Gloves", augments={'"Triple Atk."+2','STR+10','Accuracy+13','Attack+13',}},
+    body="Adhemar Jacket",
+    hands="Adhemar Wristbands",
     legs="Samnuha Tights",
-    feet={ name="Herculean Boots", augments={'Attack+21','"Triple Atk."+1','DEX+10','Accuracy+9',}},
+    feet={ name="Herculean Boots", augments={'DEX+7','Accuracy+11','STR+6 DEX+6','Accuracy+11 Attack+11',}},
     neck="Lissome Necklace",
     waist="Kentarch Belt +1",
     left_ear="Brutal Earring",
