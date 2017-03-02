@@ -137,8 +137,8 @@ function init_gear_sets()
         ammo=gear.RAbullet,
 		head="Chass. Tricorne +1",
 		hands="Carmine Fin. Ga. +1",
-		body="Laksa. Frac +2",
-        legs="Adhemar Kecks",
+		body="Laksa. Frac +3",
+        legs="Laksa. Trews +3",
         feet="Meg. Jam. +1",
 		right_ring="Haverton Ring",
 		back="Navarch's Mantle",
@@ -177,7 +177,7 @@ function init_gear_sets()
         ammo=gear.WSbullet,
         neck="Fotia Gorget",
 		waist="Fotia Belt",
-		body="Laksa. Frac +2",
+		body="Laksa. Frac +3",
 		ear1="Enervating Earring",
         ear2="Volley Earring",
 		ring1="Haverton Ring",
@@ -188,11 +188,11 @@ function init_gear_sets()
         ammo=gear.MAbullet,
     head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','Mag. Acc.+15',}},
     body={ name="Herculean Vest", augments={'STR+5','Weapon skill damage +4%','Quadruple Attack +2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
-    hands="Carmine Fin. Ga. +1",
+    hands="Meg. Gloves +1",
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Pet: Accuracy+27 Pet: Rng. Acc.+27','Accuracy+20 Attack+20','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
-    feet={ name="Herculean Boots", augments={'Mag. Acc.+20 "Mag.Atk.Bns."+20','"Store TP"+1',}},
-    neck="Sanctity Necklace",
-    waist="Eschan Stone",
+    feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','STR+2','Mag. Acc.+5','"Mag.Atk.Bns."+11',}},
+    neck="Baetyl pendant",
+    waist="Svelt. Gouriz +1",
     left_ear="Hecate's Earring",
     right_ear="Friomisi Earring",
     left_ring="Garuda Ring +1",
@@ -230,7 +230,7 @@ function init_gear_sets()
     right_ear="Friomisi Earring",
     left_ring="Arvina Ringlet +1",
     right_ring="Fenrir Ring +1",
-    back={ name="Camulus's Mantle", augments={'AGI+30','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}}
     }
 
 	sets.midcast.CorsairShot['Light Shot'] = {
@@ -259,7 +259,7 @@ function init_gear_sets()
         ammo=gear.RAbullet,
          head="Meghanada Visor +1",
     hands="Meg. Gloves +1",
-    body="Laksa. Frac +2",
+    body="Laksa. Frac +3",
     feet="Meg. Jam. +1",
     legs="Meg. Chausses +1",
     neck="Marked Gorget",
