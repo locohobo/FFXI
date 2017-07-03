@@ -54,6 +54,7 @@ function init_gear_sets()
     sets.precast.JA['Boost'] = {hands="Anchorite's Gloves +1"}
     sets.precast.JA['Dodge'] = {feet="Anchorite's Gaiters +1"}
     sets.precast.JA['Focus'] = {head="Anchorite's Crown +1"}
+
     sets.precast.JA['Counterstance'] = {feet="Hesychast's Gaiters +1"}
     sets.precast.JA['Footwork'] = {feet="Shukuyu Sune-Ate",}
     sets.precast.JA['Formless Strikes'] = {}
@@ -91,12 +92,12 @@ function init_gear_sets()
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Ginsen",
                     head="Dampening Tam",
-    body={ name="Herculean Vest", augments={'Accuracy+30','Crit.hit rate+3','STR+15','Attack+12',}},
-    hands={ name="Herculean Gloves", augments={'Accuracy+8','"Triple Atk."+2','DEX+4','Attack+25',}},
+    body="Adhemar Jacket",
+    hands="Adhemar Wristbands",
     legs="Samnuha Tights",
-    feet={ name="Herculean Boots", augments={'Attack+21','"Triple Atk."+1','DEX+10','Accuracy+9',}},
-    neck="Lissome Necklace",
-    waist="Kentarch Belt +1",
+    feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}},
+    neck="Combatant's Torque",
+    waist="Grunfield Rope",
     left_ear="Brutal Earring",
     right_ear="Mache Earring",
     left_ring="Hetairoi Ring",
@@ -116,30 +117,30 @@ function init_gear_sets()
     sets.precast.WS["Ascetic's Fury"]  = set_combine(sets.precast.WS, {})
     sets.precast.WS["Victory Smite"]   = set_combine(sets.precast.WS, {ammo="Ginsen",
                                                                         head={ name="Rao Kabuto", augments={'STR+10','DEX+10','Attack+15',}},
-                                                                        body={ name="Herculean Vest", augments={'Accuracy+21 Attack+21','"Triple Atk."+2','AGI+4','Accuracy+15','Attack+10',}},
-                                                                        hands={ name="Ryuo Tekko", augments={'STR+10','DEX+10','Accuracy+15',}},
+                                                                        body={ name="Herculean Vest", augments={'Attack+28','Crit.hit rate+4','DEX+9','Accuracy+4',}},
+                                                                        hands="Adhemar Wristbands",
                                                                         legs="Hiza. Hizayoroi +1",
-                                                                        feet={ name="Herculean Boots", augments={'Accuracy+19 Attack+19','"Triple Atk."+2','DEX+7','Accuracy+15','Attack+14',}},
-                                                                        neck="Thunder Gorget",
+                                                                        feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}},
+                                                                        neck="Fotia Gorget",
                                                                         waist="Fotia Belt",
                                                                         left_ear="Brutal Earring",
                                                                         right_ear={ name="Moonshade Earring", augments={'MP+25','TP Bonus +25',}},
-                                                                        left_ring="Begrudging Ring",
+                                                                        left_ring="Aptate Ring",
                                                                         right_ring="Epona's Ring",
                                                                         back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}})
     sets.precast.WS['Shijin Spiral']   = set_combine(sets.precast.WS, {ammo="Ginsen",
                                                                         head={ name="Rao Kabuto", augments={'STR+10','DEX+10','Attack+15',}},
-                                                                        body={ name="Herculean Vest", augments={'Accuracy+21 Attack+21','"Triple Atk."+2','AGI+4','Accuracy+15','Attack+10',}},
-                                                                        hands={ name="Herculean Gloves", augments={'Accuracy+25 Attack+25','Weapon skill damage +4%','INT+6','Accuracy+13',}},
+                                                                        body={ name="Herculean Vest", augments={'Attack+28','Crit.hit rate+4','DEX+9','Accuracy+4',}},
+                                                                        hands="Adhemar Wristbands",
                                                                         legs="Hiza. Hizayoroi +1",
-                                                                        feet={ name="Herculean Boots", augments={'Accuracy+19 Attack+19','"Triple Atk."+2','DEX+7','Accuracy+15','Attack+14',}},
-                                                                        neck="Flame Gorget",
-                                                                        waist="Flame Belt",
+                                                                        feet={ name="Herculean Boots", augments={'DEX+7','Accuracy+11','STR+6 DEX+6','Accuracy+11 Attack+11',}},
+                                                                        neck="Fotia Gorget",
+                                                                        waist="Fotia Belt",
                                                                         left_ear="Bladeborn Earring",
                                                                         right_ear="Steelflash Earring",
                                                                         left_ring="Ramuh Ring +1",
                                                                         right_ring="Epona's Ring",
-                                                                        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}})
+                                                                        back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}})
     sets.precast.WS['Dragon Kick']     = set_combine(sets.precast.WS, {})
     sets.precast.WS['Tornado Kick']    = set_combine(sets.precast.WS, {})
     sets.precast.WS['Spinning Attack'] = set_combine(sets.precast.WS, {})
@@ -241,17 +242,17 @@ function init_gear_sets()
      
     -- Normal melee sets
     sets.engaged = {head="Dampening Tam",
-    body={ name="Herculean Vest", augments={'Accuracy+30','Crit.hit rate+3','STR+15','Attack+12',}},
-    hands={ name="Herculean Gloves", augments={'Accuracy+8','"Triple Atk."+2','DEX+4','Attack+25',}},
+    body="Adhemar Jacket",
+    hands="Adhemar Wristbands",
     legs="Samnuha Tights",
-    feet={ name="Herculean Boots", augments={'Attack+21','"Triple Atk."+1','DEX+10','Accuracy+9',}},
+    feet={ name="Herculean Boots", augments={'DEX+7','Accuracy+11','STR+6 DEX+6','Accuracy+11 Attack+11',}},
     neck="Lissome Necklace",
-    waist="Kentarch Belt +1",
+    waist="Windbuffet Belt +1",
     left_ear="Brutal Earring",
     right_ear="Mache Earring",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
-                    back={ name="Segomo's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10',}}}
+                    back={ name="Segomo's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Store TP"+10',}}}
     sets.engaged.SomeAcc = {}
     sets.engaged.Acc = {ammo="Honed Tathlum",
                     head={ name="Dampening Tam", augments={'DEX+10','Accuracy+15','Mag. Acc.+15','Quadruple Attack +3',}},
