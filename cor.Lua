@@ -46,10 +46,10 @@ function user_setup()
 	state.PhysicalDefenseMode:options('PDT')
 	state.MagicalDefenseMode:options('MDT')
 
-	gear.RAbullet = "Decimating Bullet"
-	gear.WSbullet = "Decimating Bullet"
-	gear.MAbullet = "Decimating Bullet"
-	gear.QDbullet = "Animikii Bullet"
+	gear.RAbullet = "Chrono Bullet"
+	gear.WSbullet = "Chrono Bullet"
+	gear.MAbullet = "Living Bullet"
+	gear.QDbullet = "Living Bullet"
 	--gear.QDbullet = "Adlivun Bullet"
 	options.ammo_warning_limit = 15
 
@@ -99,8 +99,8 @@ function init_gear_sets()
         head="Lanun Tricorne +1",
         hands="Chasseur's Gants +1",
         body="Lanun Frac +1",
-        ring1="Barataria Ring",
-        back="Camulus Mantle",
+        meck="Regal Necklace",
+        back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
         feet="Lanun Bottes"
     }
    
@@ -121,10 +121,11 @@ function init_gear_sets()
 	-- Fast cast sets for spells
 	
 	sets.precast.FC = {
-        head="Carmine Mask",
+        head="Carmine Mask +1",
+		neck="Baetyl Pendant",
         ear1="Etiolation Earring",
 		ear2="Loquacious Earring",
-        ring1="Prolix Ring",
+        ring1="Kishar Ring",
         body="Dread Jupon",
         hands="Leyline Gloves",
         legs="Rawhide Trousers",
@@ -139,7 +140,7 @@ function init_gear_sets()
 		hands="Carmine Fin. Ga. +1",
 		body="Laksa. Frac +3",
         legs="Laksa. Trews +3",
-        feet="Meg. Jam. +1",
+        feet="Meg. Jam. +2",
 		right_ring="Haverton Ring",
 		back="Navarch's Mantle",
 		waist="Yemaya Belt"
@@ -149,18 +150,18 @@ function init_gear_sets()
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
 	sets.precast.WS = {
-        head="Meghanada Visor +1",
-    body="Meg. Cuirie +1",
-    hands="Meg. Gloves +1",
+        head="Meghanada Visor +2",
+    body="Meg. Cuirie +2",
+    hands="Meg. Gloves +2",
     legs="Meg. Chausses +1",
-    feet="Meg. Jam. +1",
-    neck="Marked Gorget",
-    waist="Kentarch Belt +1",
-    left_ear="Bladeborn Earring",
-    right_ear="Steelflash Earring",
+    feet="Meg. Jam. +2",
+    neck="Iskur Gorget",
+    waist="Windbuffet Belt +1",
+    left_ear="Brutal Earring",
+    right_ear="Ishvara Earring",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
-	 back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
+	 back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
     }
 
 
@@ -178,19 +179,22 @@ function init_gear_sets()
         neck="Fotia Gorget",
 		waist="Fotia Belt",
 		body="Laksa. Frac +3",
+		hands="Meg. Gloves +2",
+		legs="Meg. Chausses +1",
 		ear1="Enervating Earring",
-        ear2="Volley Earring",
-		ring1="Haverton Ring",
-        ring2="Garuda Ring +1"
+        ear2="Ishvara Earring",
+		ring1="Dingir Ring",
+        ring2="Haverton Ring"
     })
 
+	
 	sets.precast.WS['Wildfire'] = {
         ammo=gear.MAbullet,
     head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','Mag. Acc.+15',}},
     body={ name="Herculean Vest", augments={'STR+5','Weapon skill damage +4%','Quadruple Attack +2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
-    hands="Meg. Gloves +1",
+    hands="Carmine Fin. Ga. +1",
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Pet: Accuracy+27 Pet: Rng. Acc.+27','Accuracy+20 Attack+20','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
-    feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','STR+2','Mag. Acc.+5','"Mag.Atk.Bns."+11',}},
+    feet={ name="Herculean Boots", augments={'"Mag.Atk.Bns."+20','DEX+5','Weapon skill damage +6%',}},
     neck="Baetyl pendant",
     waist="Svelt. Gouriz +1",
     left_ear="Hecate's Earring",
@@ -204,8 +208,25 @@ function init_gear_sets()
 	
 	
 	-- Midcast Sets
+	
+	sets.midcast['Enfeebling Magic'] = {
+	ammo=gear.QDbullet,
+	head="Mummu Bonnet +1",
+    body="Mummu Jacket +1",
+    hands="Mummu Wrists +1",
+    legs="Mummu Kecks +1",
+    feet="Mummu Gamash. +1",
+    neck="Sanctity Necklace",
+    waist="Kwahu Kachina Belt",
+    left_ear="Lifestorm Earring",
+    right_ear="Psystorm Earring",
+    left_ring="Metamorph Ring",
+    right_ring="Fenrir Ring +1",
+    back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+	}
+		
 	sets.midcast.FastRecast = {
-		head="Carmine Mask",
+		head="Carmine Mask +1",
         ear1="Etiolation Earring",
 		ear2="Loquacious Earring",
         ring1="Prolix Ring",
@@ -220,7 +241,7 @@ function init_gear_sets()
 	sets.midcast.CorsairShot = {
         ammo=gear.QDbullet,
     head={ name="Herculean Helm", augments={'"Mag.Atk.Bns."+21','Weapon skill damage +3%','Mag. Acc.+15',}},
-    body={ name="Herculean Vest", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','"Store TP"+5','INT+8','"Mag.Atk.Bns."+13',}},
+    body={ name="Herculean Vest", augments={'STR+5','Weapon skill damage +4%','Quadruple Attack +2','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
     hands="Carmine Fin. Ga. +1",
     legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+23','Pet: Accuracy+27 Pet: Rng. Acc.+27','Accuracy+20 Attack+20','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},
     feet="Chass. Bottes +1",
@@ -257,15 +278,15 @@ function init_gear_sets()
 	-- Ranged gear
 	sets.midcast.RA = {
         ammo=gear.RAbullet,
-         head="Meghanada Visor +1",
-    hands="Meg. Gloves +1",
+         head="Meghanada Visor +2",
+    hands="Meg. Gloves +2",
     body="Laksa. Frac +3",
-    feet="Meg. Jam. +1",
-    legs="Meg. Chausses +1",
-    neck="Marked Gorget",
+    feet="Meg. Jam. +2",
+    legs="Laksa. Trews +3",
+    neck="Iskur Gorget",
+    ear2="Volley Earring",
     waist="Kwahu Kachina Belt",
-    left_ear="Volley Earring",
-    right_ear="Enervating Earring",
+    ear1="Enervating Earring",
     right_ring="Haverton Ring",
     left_ring="Hajduk Ring",
 	 back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
@@ -282,51 +303,50 @@ function init_gear_sets()
 	-- If you create a set with both offense and defense modes, the offense mode should be first.
 	-- EG: sets.engaged.Dagger.Accuracy.Evasion
 	
-    sets.engaged = {
+	 sets.engaged = {
         ammo=gear.RAbullet,
-        head="Meghanada Visor +1",
-    body="Meg. Cuirie +1",
+        head="Meghanada Visor +2",
+    body="Adhemar Jacket",
     hands="Adhemar Wristbands",
     legs="Carmine Cuisses +1",
-    feet="Meg. Jam. +1",
+    feet="Meg. Jam. +2",
     neck="Sanctity Necklace",
-    waist="Kentarch Belt +1",
-    left_ear="Bladeborn Earring",
-    right_ear="Steelflash Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Brual Earring",
+    right_ear="Suppanomimi",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
 	 back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
     }
-	
-	
+  	
 	-- Normal melee group
 	sets.engaged.Melee = {
         ammo=gear.RAbullet,
-        head="Meghanada Visor +1",
+        head="Adhemar Bonnet",
     body="Adhemar Jacket",
     hands="Adhemar Wristbands",
     legs="Carmine Cuisses +1",
-    feet="Meg. Jam. +1",
+    feet="Meg. Jam. +2",
     neck="Lissome Necklace",
-    waist="Kentarch Belt +1",
-    left_ear="Bladeborn Earring",
-    right_ear="Steelflash Earring",
+    waist="Windbuffet Belt +1",
+    left_ear="Brutal Earring",
+    right_ear="Suppanomimi",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
 	back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}}
     } 
 
 	sets.engaged.DW = set_combine(sets.engaged.Melee, {
-        head="Meghanada Visor +1",
-        ear1="Suppanomini",
+        head="Adhemar Bonnet",
+        ear1="Suppanomimi",
         ear2="Mache Earring",
         hands="Floral Gauntlets",
         body="Adhemar Jacket",
         legs="Carmine Cuisses +1",
-        waist="Kentarch Belt +1",
+        waist="Windbuffet Belt +1",
 		left_ring="Haverton Ring",
          back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
-        feet="Meg. Jam. +1"
+        feet="Meg. Jam. +2"
     })
 	
 	
