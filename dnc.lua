@@ -23,6 +23,7 @@
         Toggles whether or not to use an alternate step.
         
     gs c toggle selectsteptarget
+
         Toggles whether or not to use <stnpc> (as opposed to <t>) when using a step.
 --]]
 
@@ -64,7 +65,7 @@ function user_setup()
 
 
     gear.default.weaponskill_neck = "Caro Necklace"
-    gear.default.weaponskill_waist = "Grunfeld Rope"
+    gear.default.weaponskill_waist = "Grunfield Rope"
 
     -- Additional local binds
     send_command('bind ^= gs c cycle mainstep')
@@ -105,10 +106,10 @@ function init_gear_sets()
     
 
     -- Waltz set (chr and vit)
-    sets.precast.Waltz = {ammo="Sonia's Plectrum",
+    sets.precast.Waltz = {
         ammo="yamarang",
 		head="Horos Tiara",ear1="Handler's Earring",
-        body="Maxixi Casaque +1",feet="Maxixi Toe Shoes"}
+        body="Maxixi Casaque",feet="Maxixi Toe Shoes"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
@@ -117,15 +118,26 @@ function init_gear_sets()
 
     sets.precast.Jig = {legs="Horos Tights", feet="Maxixi Toe Shoes"}
 
+	
+	sets.precast.FC = {
+        
+        ear1="Etiolation Earring",
+		ear2="Loquacious Earring",
+        ring1="Prolix Ring",
+        body="Dread Jupon",
+        hands="Leyline Gloves",
+        legs="Rawhide Trousers",
+		
+    }
     
     --sets.precast.Step['Feather Step'] = {feet="Charis Shoes +2"}
 
     sets.precast.Flourish1 = {}
     sets.precast.Flourish1['Violent Flourish'] = {neck="Sanctity Necklace",
         body="Horos Casaque",hands="Buremte Gloves",ring2="Metamorph Ring",
-        feet={ name="Herculean Boots", augments={'Weapon skill damage +4%','STR+2','Mag. Acc.+5','"Mag.Atk.Bns."+11',}}} -- magic accuracy
+        feet="Mummu Gamash. +1"} -- magic accuracy
     sets.precast.Flourish1['Desperate Flourish'] = {ammo="Honed Tathlum",
-        neck="Sanctity Necklace",
+        head="Whirlpool Mask",neck="Sanctity Necklace",
         body="Horos Casaque",
         waist="Kentarch Belt +1"} -- acc gear
 
@@ -142,14 +154,14 @@ function init_gear_sets()
     sets.precast.WS = {ammo="Jukukik Feather",
         head="Dampening Tam",
 		neck="Caro Necklace",
-		ear1="Brutal Earring",ear2="Mache Earring",
-        body="Adhemar Jacket",
-		hands="Meg. Gloves +1",
+		ear1="Sherida Earring",ear2="Mache Earring",
+        body="Meg. Cuirie +2",
+		hands="Meg. Gloves +2",
 		ring1="Rajas Ring",ring2="Epona's Ring",
         back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-		waist="Grunfeld Rope",
+		waist="Grunfield Rope",
 		legs="Lustr. Subligar +1",
-		feet={ name="Herculean Boots", augments={'DEX+7','Accuracy+11','STR+6 DEX+6','Accuracy+11 Attack+11',}}}
+		feet="Lustratio Leggings"}
     
     
      -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
@@ -158,9 +170,9 @@ function init_gear_sets()
 	
 		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", ear1="Ishvara Earring",ring2="Apate Ring"})
 		
-		sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {hands="Adhemar Wristbands", neck="Fotia Gorget", belt="Fotia Belt"})
+		sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {neck="Fotia Gorget", belt="Fotia Belt"})
 		
-		sets.precast.WS['Phyrrhic Kleos'] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", nack="Fotia Gorget", feet="Lustratio Leggings", hands="Adhemar Wristbands", belt="Fotia Belt", ring2="Apate Ring", ammo="Floestone"})
+		sets.precast.WS['Phyrrhic Kleos'] = {ammo="Floestone", head="Lustratio Cap +1", ear1="Sherida Earring", ear2="Mache Earring", body="Adhemar Jacket", hands="Adhemar Wristbands", ring1="Rajas Ring", ring2="Apate Ring", legs="Samnuha Tights", feet="Lustratio Leggings", hands="Adhemar Wristbands", belt="Fotia Belt", back={ name="Senuna's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}}
     
     
     
@@ -182,10 +194,10 @@ function init_gear_sets()
     body="Adhemar Jacket",
     hands="Adhemar Wristbands",
     legs="Samnuha Tights",
-    feet={ name="Herculean Boots", augments={'DEX+7','Accuracy+11','STR+6 DEX+6','Accuracy+11 Attack+11',}},
-    neck="Lissome Necklace",
-    waist="Kentarch Belt +1",
-    left_ear="Brutal Earring",
+    feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}},
+    neck="Combatant's Torque",
+    waist="Windbuffet Belt +1",
+    left_ear="Sherida Earring",
     right_ear="Mache Earring",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
@@ -350,12 +362,12 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WAR' then
-        set_macro_page(3, 20)
+        set_macro_page(3, 18)
     elseif player.sub_job == 'NIN' then
-        set_macro_page(1, 20)
+        set_macro_page(1, 18)
     elseif player.sub_job == 'SAM' then
-        set_macro_page(2, 20)
+        set_macro_page(2, 18)
     else
-        set_macro_page(5, 20)
+        set_macro_page(5, 18)
     end
 end
