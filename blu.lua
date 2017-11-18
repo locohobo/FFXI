@@ -54,7 +54,7 @@ function get_sets()
 	sets.Idle = {ammo="Hydrocera",
 			head="Rawhide Mask",
 		    body="Jhakri Robe +2",ring1="Sheltered ring",ring2="Paguroidea Ring",
-			back="Kumbira Cape",waist="Flume Belt",legs="Carmine Cuisses +1"}
+			back="Solemnity Cape",waist="Flume Belt",legs="Carmine Cuisses +1"}
 						  					
 							
 	
@@ -66,13 +66,13 @@ function get_sets()
 					body="Adhemar jacket",
 					hands="Adhemar Wristbands",
 					legs="Samnuha Tights",
-					feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}},
-					neck="Combatant's Torque",
+					feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}},
+					neck="Lissome Necklace",
 					waist="Windbuffet belt +1",
-					left_ear="Brutal Earring",
-					right_ear="Suppanomimi",
+					ear2="Brutal Earring",
+					ear1="Suppanomimi",
 					left_ring="Petrov Ring",
-					right_ring="Epona's Ring",
+					right_ring="Hetairoi Ring",
 					back="Rosmerta's Cape"}
 	
 	--Weaponskill Sets-- Cornflower for Requiescat because it saves a spot as it is the ONLY thing I would need to carry Bleating Mantle for...
@@ -85,7 +85,6 @@ function get_sets()
 					body="Adhemar Jacket",
 					hands="Adhemar Wristbands",
 					ring1="Epona's ring",ring2="Rufescent Ring",
-					back="Cornflower Cape",
 					waist="Fotia Belt",
 					legs="Telchine Braconi",
 					feet="Carmine Greaves"}
@@ -98,11 +97,11 @@ function get_sets()
 					ear1="Mache Earring",ear2="Brutal Earring",
 					body="Abnoba Kaftan",
 					hands="Adhemar Wristbands",
-					ring1="Epona's ring",ring2="Apate Ring",
+					ring1="Epona's ring",ring2="Hetairoi Ring",
 					back="Rosmerta's Cape",
 					waist="Fotia Belt",
 					legs="Samnuha Tights",
-					feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}}}
+					feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}}}
 							   
 	
 	
@@ -128,7 +127,7 @@ function get_sets()
 					back="Cornflower cape",
 					waist="Grunfeld Rope",
 					legs="Amalric Slops",
-					feet="Jhakri Pigaches +1"}
+					feet="Jhakri Pigaches +2"}
 			
 	sets.WS.CircleBlade = {ammo="Floestone",
 			       head="Adhemar Bonnet",
@@ -157,7 +156,7 @@ function get_sets()
 			      back="Cornflower cape",
 				  waist="Grunfeld Rope",
 				  legs="Samnuha Tights",
-				  feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}}}
+				  feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}}}
 						  
 	sets.BlueMagic.STRDEX = set_combine(sets.BlueMagic.STR,{
 				 })
@@ -181,7 +180,7 @@ function get_sets()
 			    back="Cornflower cape",
 				waist="Eschan Stone",
 				legs="Jhakri Slops +1",
-				feet="Jhakri Pigaches +1"}
+				feet="Jhakri Pigaches +2"}
 				  
 	sets.BlueMagic.DarkNuke = set_combine(sets.BlueMagic.INT,{
 				head="Pixie Hairpin +1",
@@ -231,7 +230,7 @@ function get_sets()
 					back="Rosmerta's Cape",
 					waist="Grunfeld Rope",
 					legs="Samnuha Tights",
-					feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}}}
+					feet={ name="Herculean Boots", augments={'Accuracy+28','"Triple Atk."+2','DEX+6','Attack+4',}}}
 								  
 	
 	sets.BlueMagic.WhiteWind = {ammo="Pemphredo Tathlum",
@@ -256,7 +255,7 @@ function get_sets()
 				    back="Cornflower cape",
 					waist="Eschan Stone",
 					legs="Jhakri Slops +1",
-					feet="Jhakri Pigaches +1"} 
+					feet="Jhakri Pigaches +2"} 
 									 
 	sets.BlueMagic.Skill = {ammo="Pemphredo Tathlum",
 					head="Luhlaza Keffiyeh",
@@ -279,10 +278,10 @@ function get_sets()
 	
 	sets.Utility.Stoneskin = {ammo="Hydrocera",
 					head="Carmine Mask +1",
-					neck="Stone Gorget",
+					
 					ear1="Loquac. earring",ear2="Earthcry earring",
 					body="Assim. jubbah +1",
-					hands="Stone Mufflers",
+					
 					ring2="Rufescent Ring",
 					back="Swith cape",
 					waist="Siegel sash",
