@@ -161,15 +161,22 @@ function init_gear_sets()
     back="Solemnity Cape",
 }
  
-    sets.midcast['Enhancing Magic'] = {    ammo="Impatiens",
-    neck="Twilight Torque",
-    waist="Siegel Sash",
-    left_ear="Gifted Earring",
-    right_ear="Calamitous Earring",
-    left_ring="Vertigo Ring",
-    right_ring="Ephedra Ring",
-    back="Perimede Cape",
-}
+     sets.midcast['Enhancing Magic'] = {
+		ammo="Savant's Treatise",
+        head="Telchine Cap",
+        body="Telchine Chasuble",
+        hands="Telchine Gloves",
+        legs="Telchine Braconi",
+        feet="Telchine Pigaches",
+        neck="Incanter's Torque",
+        ear1="Augment. Earring",
+        ear2="Andoaa Earring",
+        ring1="Stikini Ring",
+        ring2="Stikini Ring",
+        back="Fi Follet Cape +1",
+        waist="Olympus Sash",
+        }
+
  
     sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {ear1="Earthcry earring",legs="Haven hose",neck="Nodens gorget"})
  
@@ -187,19 +194,19 @@ function init_gear_sets()
     sets.midcast.MndEnfeebles = {ammo="Mana ampulla",
         head="Jhakri coronal +2",neck="Imbodla Necklace",ear1="Barkaro. Earring",ear2="Lifestorm Earring",
         body="Vanya Robe",hands="Jhakri cuffs +1",ring1="Sirona's ring",ring2="Strendu Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs="Psycloth Lappas",feet="Jhakri pigaches +1"}
+        back="Lugh's cape",waist="Eschan Stone",legs="Psycloth Lappas",feet="Jhakri pigaches +2"}
  
     sets.midcast.IntEnfeebles = {ammo="Mana ampulla",
         head="Jhakri coronal +2",neck="Imbodla Necklace",ear1="Friomisi Earring",ear2="Barkaro. Earring",
         body="Vanya Robe",hands="Jhakri cuffs +1",ring1="Fenrir Ring +1",ring2="Strendu Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs="Psycloth Lappas",feet="Jhakri pigaches +1"}
+        back="Lugh's cape",waist="Eschan Stone",legs="Psycloth Lappas",feet="Jhakri pigaches +2"}
  
     sets.midcast.ElementalEnfeeble = sets.midcast.IntEnfeebles
  
     sets.midcast['Dark Magic'] = {ammo="Mana ampulla",
         head="Pixie Hairpin +1",neck="Sanctity necklace",ear1="Barkaro. Earring",ear2="Lifestorm Earring",
         body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Sirona's ring",ring2="Strendu Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet="Jhakri pigaches +1"}
+        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet="Jhakri pigaches +2"}
  
     sets.midcast.Kaustra = {ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",neck="Sanctity necklace",ear1="Barkaro. Earring",ear2="Static earring",
@@ -278,12 +285,12 @@ back=SCH_whale_back}
     sets.idle.Town = {ammo="Impatiens",
         head="Befouled Crown",neck="Sanctity necklace",ear1="Infused earring",ear2="Friomisi Earring",
         body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Defending ring",ring2="Fenrir Ring +1",
-        back="Lugh's cape",waist="Eschan Stone",legs="Lengo Pants",feet="Jhakri pigaches +1"}
+        back="Lugh's cape",waist="Eschan Stone",legs="Lengo Pants",feet="Jhakri pigaches +2"}
  
     sets.idle.Field = {ammo="Impatiens",
         head="Befouled Crown",neck="Sanctity necklace",ear1="Infused earring",ear2="Lifestorm earring",
         body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Ephedra ring",ring2="Defending ring",
-        back="Solemnity cape",waist="Eschan Stone",legs="Lengo Pants",feet="Jhakri pigaches +1"}
+        back="Solemnity cape",waist="Eschan Stone",legs="Lengo Pants",feet="Jhakri pigaches +2"}
  
 
     sets.idle.Field.Stun = {}
@@ -301,7 +308,7 @@ back=SCH_whale_back}
     sets.engaged = {ammo="Impatiens",
         head="Jhakri coronal +2",neck="Sanctity necklace",ear1="Infused earring",ear2="Lifestorm earring",
         body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Ephedra ring",ring2="shneddick ring",
-        back="Solemnity cape",waist="Eschan Stone",legs="Assiduity pants +1",feet="Jhakri pigaches +1"}
+        back="Solemnity cape",waist="Eschan Stone",legs="Assiduity pants +1",feet="Jhakri pigaches +2"}
      
  
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
