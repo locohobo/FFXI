@@ -13,6 +13,8 @@
 	mode for both melee and ranged weaponskills.  Need to fix that in core.
 --]]
 
+------------------------FIX TOGGLE -----------------------------------------
+
 
 -- Initialization function for this job file.
 function get_sets()
@@ -90,7 +92,7 @@ function init_gear_sets()
 	
 	sets.precast.JA['Triple Shot'] = {body="Chasseur's Frac +1"}
 	sets.precast.JA['Snake Eye'] = {legs="Lanun Culottes +1"}
-	sets.precast.JA['Wild Card'] = {feet="Lanun Bottes"}
+	sets.precast.JA['Wild Card'] = {feet="Lanun Bottes +1"}
 	sets.precast.JA['Random Deal'] = {body="Lanun Frac +1"}
 	
     sets.CapacityMantle = {back="Mecistopins Mantle"}
@@ -99,9 +101,9 @@ function init_gear_sets()
         head="Lanun Tricorne +1",
         hands="Chasseur's Gants +1",
         body="Lanun Frac +1",
-        meck="Regal Necklace",
+        neck="Regal Necklace",
         back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
-        feet="Lanun Bottes"
+        feet="Lanun Bottes +1"
     }
    
 	
@@ -153,11 +155,11 @@ function init_gear_sets()
         head="Meghanada Visor +2",
     body="Meg. Cuirie +2",
     hands="Meg. Gloves +2",
-    legs="Meg. Chausses +1",
+    legs="Meg. Chausses +2",
     feet="Meg. Jam. +2",
     neck="Iskur Gorget",
     waist="Windbuffet Belt +1",
-    left_ear="Brutal Earring",
+    left_ear="Telos Earring",
     right_ear="Ishvara Earring",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
@@ -166,11 +168,11 @@ function init_gear_sets()
 
 
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
-	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, { ear2="Moonshade Earring"})
+	sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, { right_ear="Brutal Earring"})
 
 	sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {legs="Samnuha Tights"})
 
-	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {ear2="Moonshade Earring", legs="Samnuha Tights"})
+	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {legs="Samnuha Tights"})
 	
 	sets.precast.WS['Savage Blade'] = set_combine(sets.precast.WS, {neck="Lissome Necklace"})
 
@@ -180,11 +182,11 @@ function init_gear_sets()
 		waist="Fotia Belt",
 		body="Laksa. Frac +3",
 		hands="Meg. Gloves +2",
-		legs="Meg. Chausses +1",
-		ear1="Enervating Earring",
-        ear2="Ishvara Earring",
+		legs="Meg. Chausses +2",
+		right_ear="Enervating Earring",
+        left_ear="Telos Earring",
 		ring1="Dingir Ring",
-        ring2="Haverton Ring"
+        ring2="Regal Ring"
     })
 
 	
@@ -211,8 +213,8 @@ function init_gear_sets()
 	
 	sets.midcast['Enfeebling Magic'] = {
 	ammo=gear.QDbullet,
-	head="Mummu Bonnet +1",
-    body="Mummu Jacket +1",
+	head="Mummu Bonnet +2",
+    body="Mummu Jacket +2",
     hands="Mummu Wrists +1",
     legs="Mummu Kecks +1",
     feet="Mummu Gamash. +1",
@@ -229,7 +231,7 @@ function init_gear_sets()
 		head="Carmine Mask +1",
         ear1="Etiolation Earring",
 		ear2="Loquacious Earring",
-        ring1="Prolix Ring",
+        ring1="Kishar Ring",
         body="Dread Jupon",
         hands="Leyline Gloves",
         legs="Rawhide Trousers",
@@ -256,8 +258,8 @@ function init_gear_sets()
 
 	sets.midcast.CorsairShot['Light Shot'] = {
 		ammo=gear.QDbullet,
-	head="Mummu Bonnet +1",
-    body="Mummu Jacket +1",
+	head="Mummu Bonnet +2",
+    body="Mummu Jacket +2",
     hands="Mummu Wrists +1",
     legs="Mummu Kecks +1",
     feet="Mummu Gamash. +1",
@@ -284,7 +286,7 @@ function init_gear_sets()
     feet="Meg. Jam. +2",
     legs="Laksa. Trews +3",
     neck="Iskur Gorget",
-    ear2="Volley Earring",
+    ear2="Telos Earring",
     waist="Kwahu Kachina Belt",
     ear1="Enervating Earring",
     right_ring="Haverton Ring",
@@ -312,7 +314,7 @@ function init_gear_sets()
     feet="Meg. Jam. +2",
     neck="Sanctity Necklace",
     waist="Windbuffet Belt +1",
-    left_ear="Brual Earring",
+    left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Petrov Ring",
     right_ring="Rajas Ring",
@@ -325,14 +327,14 @@ function init_gear_sets()
         head="Adhemar Bonnet",
     body="Adhemar Jacket",
     hands="Adhemar Wristbands",
-    legs="Carmine Cuisses +1",
-    feet="Meg. Jam. +2",
+    legs="Samnuha Tights",
+    feet={ name="Herculean Boots", augments={'Accuracy+28','"Triple Atk."+2','DEX+6','Attack+4',}},
     neck="Lissome Necklace",
     waist="Windbuffet Belt +1",
-    left_ear="Brutal Earring",
+    left_ear="Telos Earring",
     right_ear="Suppanomimi",
     left_ring="Petrov Ring",
-    right_ring="Rajas Ring",
+    right_ring="Epona's Ring",
 	back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}}
     } 
 
@@ -342,7 +344,7 @@ function init_gear_sets()
         ear2="Mache Earring",
         hands="Floral Gauntlets",
         body="Adhemar Jacket",
-        legs="Carmine Cuisses +1",
+        legs="Samnuha Tights",
         waist="Windbuffet Belt +1",
 		left_ring="Haverton Ring",
          back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','Rng.Acc.+10','"Store TP"+10',}},
