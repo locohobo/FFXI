@@ -65,7 +65,7 @@ function user_setup()
 
 
     gear.default.weaponskill_neck = "Caro Necklace"
-    gear.default.weaponskill_waist = "Grunfield Rope"
+    gear.default.weaponskill_waist = "Grunfeld Rope"
 
     -- Additional local binds
     send_command('bind ^= gs c cycle mainstep')
@@ -109,7 +109,7 @@ function init_gear_sets()
     sets.precast.Waltz = {
         ammo="yamarang",
 		head="Horos Tiara",ear1="Handler's Earring",
-        body="Maxixi Casaque",feet="Maxixi Toe Shoes"}
+        body="Maxixi Casaque +2",feet="Maxixi Toe Shoes"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
@@ -123,10 +123,12 @@ function init_gear_sets()
         
         ear1="Etiolation Earring",
 		ear2="Loquacious Earring",
-        ring1="Prolix Ring",
+        head="herculean helm",
         body="Dread Jupon",
+		neck="Baetyl Pendant",
         hands="Leyline Gloves",
         legs="Rawhide Trousers",
+		
 		
     }
     
@@ -134,10 +136,10 @@ function init_gear_sets()
 
     sets.precast.Flourish1 = {}
     sets.precast.Flourish1['Violent Flourish'] = {neck="Sanctity Necklace",
-        body="Horos Casaque",hands="Buremte Gloves",ring2="Metamorph Ring",
+        body="Horos Casaque",ring2="Metamorph Ring",
         feet="Mummu Gamash. +1"} -- magic accuracy
-    sets.precast.Flourish1['Desperate Flourish'] = {ammo="Honed Tathlum",
-        head="Whirlpool Mask",neck="Sanctity Necklace",
+    sets.precast.Flourish1['Desperate Flourish'] = {ammo="Yamarang",
+        neck="Sanctity Necklace",
         body="Horos Casaque",
         waist="Kentarch Belt +1"} -- acc gear
 
@@ -145,7 +147,7 @@ function init_gear_sets()
     sets.precast.Flourish2['Reverse Flourish'] = {hands="Maculele Bangles +1"}
 
     sets.precast.Flourish3 = {}
-    sets.precast.Flourish3['Striking Flourish'] = {body="Charis Casaque +2"}
+    sets.precast.Flourish3['Striking Flourish'] = {body="Maculele Casaque"}
     sets.precast.Flourish3['Climactic Flourish'] = {head="Maculele Tiara +1"}
 
        
@@ -154,25 +156,34 @@ function init_gear_sets()
     sets.precast.WS = {ammo="Jukukik Feather",
         head="Dampening Tam",
 		neck="Caro Necklace",
-		ear1="Sherida Earring",ear2="Mache Earring",
+		ear1="Sherida Earring",ear2="Telos Earring",
         body="Meg. Cuirie +2",
 		hands="Meg. Gloves +2",
-		ring1="Rajas Ring",ring2="Epona's Ring",
+		ring1="Regal Ring",ring2="Ilabrat Ring",
         back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-		waist="Grunfield Rope",
+		waist="Grunfeld Rope",
 		legs="Lustr. Subligar +1",
 		feet="Lustratio Leggings"}
     
     
      -- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
 
-		sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {ring1="Garuda Ring +1", ring2="Apate Ring", waist="Fotia Belt"})
+		sets.precast.WS['Exenterator'] = set_combine(sets.precast.WS, {ring1="Garuda Ring +1", neck="fotia gorget", waist="Fotia Belt"})
 	
-		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", ear1="Ishvara Earring",ring2="Apate Ring"})
+		sets.precast.WS["Rudra's Storm"] = set_combine(sets.precast.WS, {head="Lilitu Headpiece", ear2="Ishvara Earring", ammo="charis feather"})
 		
-		sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {neck="Fotia Gorget", belt="Fotia Belt"})
+		sets.precast.WS['Evisceration'] = set_combine(sets.precast.WS, {neck="Fotia Gorget", waist="Fotia Belt"})
 		
-		sets.precast.WS['Phyrrhic Kleos'] = {ammo="Floestone", head="Lustratio Cap +1", ear1="Sherida Earring", ear2="Mache Earring", body="Adhemar Jacket", hands="Adhemar Wristbands", ring1="Rajas Ring", ring2="Apate Ring", legs="Samnuha Tights", feet="Lustratio Leggings", hands="Adhemar Wristbands", belt="Fotia Belt", back={ name="Senuna's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}}
+		sets.precast.WS['Pyrrhic Kleos'] = {ammo="Floestone", 
+		head="Lustratio Cap +1",
+		body="Adhemar Jacket",
+		hands="Adhemar Wristbands",
+		ring1="Regal Ring", ring2="Apate Ring",
+		ear2="Mache Earring",
+		legs="Samnuha Tights",
+		feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}},
+		neck="fotia gorget", waist="Fotia Belt",
+		back={ name="Senuna's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10',}}}
     
     
     
@@ -194,14 +205,14 @@ function init_gear_sets()
     body="Adhemar Jacket",
     hands="Adhemar Wristbands",
     legs="Samnuha Tights",
-    feet={ name="Herculean Boots", augments={'Attack+8','"Triple Atk."+1','STR+7','Accuracy+9',}},
-    neck="Combatant's Torque",
+    feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}},
+    neck="Anu Torque",
     waist="Windbuffet Belt +1",
     left_ear="Sherida Earring",
-    right_ear="Mache Earring",
-    left_ring="Petrov Ring",
-    right_ring="Rajas Ring",
-	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Store TP +10',}}}
+    right_ear="Telos Earring",
+    left_ring="Ilabrat Ring",
+    right_ring="Petrov Ring",
+	back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Dex+10','Store TP +10',}}}
 
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
@@ -362,12 +373,13 @@ end
 function select_default_macro_book()
     -- Default macro set/book
     if player.sub_job == 'WAR' then
-        set_macro_page(3, 18)
-    elseif player.sub_job == 'NIN' then
-        set_macro_page(1, 18)
-    elseif player.sub_job == 'SAM' then
         set_macro_page(2, 18)
+    elseif player.sub_job == 'NIN' then
+        set_macro_page(3, 18)
+    elseif player.sub_job == 'SAM' then
+        set_macro_page(1, 18)
     else
         set_macro_page(5, 18)
     end
 end
+
