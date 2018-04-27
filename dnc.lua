@@ -109,7 +109,7 @@ function init_gear_sets()
     sets.precast.Waltz = {
         ammo="yamarang",
 		head="Horos Tiara",ear1="Handler's Earring",
-        body="Maxixi Casaque +2",feet="Maxixi Toe Shoes"}
+        body="Maxixi Casaque +3",feet="Maxixi Toe Shoes"}
         
     -- Don't need any special gear for Healing Waltz.
     sets.precast.Waltz['Healing Waltz'] = {}
@@ -137,7 +137,7 @@ function init_gear_sets()
     sets.precast.Flourish1 = {}
     sets.precast.Flourish1['Violent Flourish'] = {neck="Sanctity Necklace",
         body="Horos Casaque",ring2="Metamorph Ring",
-        feet="Mummu Gamash. +1"} -- magic accuracy
+        feet="Mummu Gamash. +2"} -- magic accuracy
     sets.precast.Flourish1['Desperate Flourish'] = {ammo="Yamarang",
         neck="Sanctity Necklace",
         body="Horos Casaque",
@@ -154,11 +154,11 @@ function init_gear_sets()
     -- Weaponskill sets
     -- Default set for any weaponskill that isn't any more specifically defined
     sets.precast.WS = {ammo="Jukukik Feather",
-        head="Dampening Tam",
+        head="Adhemar Bonnet +1",
 		neck="Caro Necklace",
-		ear1="Sherida Earring",ear2="Telos Earring",
+		ear1="Sherida Earring",ear2="Mache Earring",
         body="Meg. Cuirie +2",
-		hands="Meg. Gloves +2",
+		hands="Maxixi Bangles +3",
 		ring1="Regal Ring",ring2="Ilabrat Ring",
         back={ name="Senuna's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
 		waist="Grunfeld Rope",
@@ -176,9 +176,10 @@ function init_gear_sets()
 		
 		sets.precast.WS['Pyrrhic Kleos'] = {ammo="Floestone", 
 		head="Lustratio Cap +1",
-		body="Adhemar Jacket",
-		hands="Adhemar Wristbands",
+		body="Adhemar Jacket +1",
+		hands="Maxixi Bangles +3",
 		ring1="Regal Ring", ring2="Apate Ring",
+		ear1="Sherida Earring",
 		ear2="Mache Earring",
 		legs="Samnuha Tights",
 		feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}},
@@ -201,9 +202,9 @@ function init_gear_sets()
     -- Normal melee group
     sets.engaged = 
 	{ ammo="Yamarang",
-    head="Dampening Tam",
-    body="Adhemar Jacket",
-    hands="Adhemar Wristbands",
+    head="Adhemar Bonnet +1",
+    body="Adhemar Jacket +1",
+    hands="Adhemar Wrist. +1",
     legs="Samnuha Tights",
     feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}},
     neck="Anu Torque",
@@ -382,4 +383,3 @@ function select_default_macro_book()
         set_macro_page(5, 18)
     end
 end
-
