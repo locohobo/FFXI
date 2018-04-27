@@ -103,7 +103,7 @@ function init_gear_sets()
     body="Anhur Robe",
     hands="Acad. Bracers +2",
     legs="Psycloth Lappas",
-    feet={ name="Merlinic Crackows", augments={'"Cure" spellcasting time -7%','"Fast Cast"+3','Mag. Acc.+19 "Mag.Atk.Bns."+19',}},
+    feet="Acad. Loafers +3",
     waist="Siegel Sash",
     ear1="Etiolation Earring", ear2="Loquacious earring",
     back="Swith Cape",
@@ -193,20 +193,20 @@ function init_gear_sets()
     -- Custom spell classes
     sets.midcast.MndEnfeebles = {ammo="Mana ampulla",
         head="Jhakri coronal +2",neck="Imbodla Necklace",ear1="Barkaro. Earring",ear2="Lifestorm Earring",
-        body="Vanya Robe",hands="Jhakri cuffs +1",ring1="Sirona's ring",ring2="Strendu Ring",
+        body="Vanya Robe",hands="Jhakri cuffs +2",ring1="Sirona's ring",ring2="Strendu Ring",
         back="Lugh's cape",waist="Eschan Stone",legs="Psycloth Lappas",feet="Jhakri pigaches +2"}
  
     sets.midcast.IntEnfeebles = {ammo="Mana ampulla",
         head="Jhakri coronal +2",neck="Imbodla Necklace",ear1="Friomisi Earring",ear2="Barkaro. Earring",
-        body="Vanya Robe",hands="Jhakri cuffs +1",ring1="Fenrir Ring +1",ring2="Strendu Ring",
+        body="Vanya Robe",hands="Jhakri cuffs +2",ring1="Fenrir Ring +1",ring2="Strendu Ring",
         back="Lugh's cape",waist="Eschan Stone",legs="Psycloth Lappas",feet="Jhakri pigaches +2"}
  
     sets.midcast.ElementalEnfeeble = sets.midcast.IntEnfeebles
  
     sets.midcast['Dark Magic'] = {ammo="Mana ampulla",
         head="Pixie Hairpin +1",neck="Sanctity necklace",ear1="Barkaro. Earring",ear2="Lifestorm Earring",
-        body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Sirona's ring",ring2="Strendu Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet="Jhakri pigaches +2"}
+        body="Jhakri robe +2",hands="Jhakri cuffs +2",ring1="Sirona's ring",ring2="Strendu Ring",
+        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +2",feet="Jhakri pigaches +2"}
  
     sets.midcast.Kaustra = {ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",neck="Sanctity necklace",ear1="Barkaro. Earring",ear2="Static earring",
@@ -220,8 +220,8 @@ function init_gear_sets()
  
     sets.midcast.Drain = {ammo="Mana ampulla",
         head="Pixie Hairpin +1",neck="Stoicheion medal",ear1="Barkaro. Earring",ear2="Lifestorm Earring",
-        body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Sirona's ring",ring2="Strendu Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
+        body="Jhakri robe +2",hands="Jhakri cuffs +2",ring1="Sirona's ring",ring2="Strendu Ring",
+        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +2",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
  
     sets.midcast.Aspir = sets.midcast.Drain
  
@@ -231,7 +231,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {ammo="Pemphredo Tathlum",
         head="Merlinic Hood",neck="Sanctity necklace",ear1="Barkaro. Earring",ear2="Friomisi Earring",
         body="Jhakri robe +2",hands="Amalric gages",ring1="Fenrir Ring +1",ring2="Strendu Ring",
-        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
+        back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +2",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
  
     sets.midcast['Elemental Magic'].MB = {ammo="Pemphredo Tathlum",
         head="Merlinic Hood",neck="Mizu. Kubikazari",ear1="Barkaro. Earring",ear2="Friomisi earring",
@@ -252,7 +252,7 @@ function init_gear_sets()
  
     sets.midcast.Helix = {ammo="Pemphredo Tathlum",
         head="Jhakri coronal +2",neck="Sanctity necklace",ear1="Barkaro. Earring",ear2="Friomisi Earring",
-        body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Fenrir Ring +1",ring2="Strendu Ring",
+        body="Jhakri robe +2",hands="Jhakri cuffs +2",ring1="Fenrir Ring +1",ring2="Strendu Ring",
         back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
      
     sets.midcast.Helix.MB = {ammo="Pemphredo Tathlum",
@@ -284,12 +284,12 @@ back=SCH_whale_back}
  
     sets.idle.Town = {ammo="Impatiens",
         head="Befouled Crown",neck="Sanctity necklace",ear1="Infused earring",ear2="Friomisi Earring",
-        body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Defending ring",ring2="Fenrir Ring +1",
+        body="Jhakri robe +2",hands="Jhakri cuffs +2",ring1="Defending ring",ring2="Fenrir Ring +1",
         back="Lugh's cape",waist="Eschan Stone",legs="Lengo Pants",feet="Jhakri pigaches +2"}
  
     sets.idle.Field = {ammo="Impatiens",
         head="Befouled Crown",neck="Sanctity necklace",ear1="Infused earring",ear2="Lifestorm earring",
-        body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Ephedra ring",ring2="Defending ring",
+        body="Jhakri robe +2",hands="Jhakri cuffs +2",ring1="Ephedra ring",ring2="Defending ring",
         back="Solemnity cape",waist="Eschan Stone",legs="Lengo Pants",feet="Jhakri pigaches +2"}
  
 
@@ -307,7 +307,7 @@ back=SCH_whale_back}
     -- Normal melee group
     sets.engaged = {ammo="Impatiens",
         head="Jhakri coronal +2",neck="Sanctity necklace",ear1="Infused earring",ear2="Lifestorm earring",
-        body="Jhakri robe +2",hands="Jhakri cuffs +1",ring1="Ephedra ring",ring2="shneddick ring",
+        body="Jhakri robe +2",hands="Jhakri cuffs +2",ring1="Ephedra ring",ring2="shneddick ring",
         back="Solemnity cape",waist="Eschan Stone",legs="Assiduity pants +1",feet="Jhakri pigaches +2"}
      
  
