@@ -181,7 +181,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
         ammo="Pemphredo Tathlum",
         
-        neck="Eddy Necklace", -- 11 matk
+        neck="Sanctity Necklace", 
         ear1="Friomisi Earring", -- 10 matk
         ear2="Crematio Earring", -- 6 matk 6 mdmg
         hands="Leyline Gloves",
@@ -194,7 +194,7 @@ function init_gear_sets()
     -- Mix of HP boost, -Spell interruption%, and Dark Skill
     sets.midcast['Dread Spikes'] = set_combine(sets.midcast['Dark Magic'], {
         ammo="Impatiens",
-        body="Heathen's Cuirass +1",
+        body="Heathen's Cuirass",
         hands="Emicho Gauntlets",
         ring2="K'ayres Ring",
         back="Trepidity Mantle",
@@ -203,7 +203,7 @@ function init_gear_sets()
         
     })
     sets.midcast['Dread Spikes'].Acc = set_combine(sets.midcast['Dark Magic'], {
-        body="Heathen's Cuirass +1",
+        body="Heathen's Cuirass",
         hands="Leyline Gloves",
         waist="Eschan Stone", -- macc/matk 7
     })
@@ -244,10 +244,14 @@ function init_gear_sets()
     -- General sets
     sets.precast.WS = {
         ammo="Ginsen",
+		head="Flam. Zucchetto +2",
         neck="Lissome Necklace",
-        body="Ignominy Cuirass +2",
+        body="Ignominy Cuirass +3",
 		hands="Flam. Manopolas +2",
-        ring1="Niqmaddu Ring",
+        right_ear="Cessance Earring",
+		left_ear="Ishvara Earring",
+		legs="Ig. Flanchard +3",
+		ring1="Niqmaddu Ring",
         ring2="Regal Ring",
         waist="Ioskeha Belt",
         feet="Sulev. Leggings +2"
@@ -265,8 +269,12 @@ function init_gear_sets()
     -- RESOLUTION
     -- 86-100% STR
     sets.precast.WS.Resolution = set_combine(sets.precast.WS, {
-        neck="Fotia Gorget",
-        waist="Fotia Belt"
+        ammo="Seeth. Bomblet +1",
+		left_ear="Brutal Earring",
+		neck="Fotia Gorget",
+        waist="Fotia Belt",
+		feet="Flam. Gambieras +2",
+		back={ name="Ankou's Mantle", augments={'STR+20','Accuracy+20 Attack+20','"Dbl.Atk."+10',}},
     })
     
 
@@ -274,12 +282,13 @@ function init_gear_sets()
     -- VIT 80%
     sets.precast.WS.Torcleaver = set_combine(sets.precast.WS, {
         ammo="Knobkierrie",
+		head="Odyssean Helm",
 		neck="Fotia Gorget",
 		hands="Odyssean Gauntlets",
+		legs="Odyssean Cuisses",
         waist="Fotia Belt",
-		right_ear="Ishvara Earring"
-		
-		
+		right_ear="Ishvara Earring",
+		back={ name="Ankou's Mantle", augments={'VIT+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}}
     })
     
 
@@ -288,8 +297,8 @@ function init_gear_sets()
     -- Base set only used at 3000TP to put AM3 up
     sets.precast.WS.Insurgency = set_combine(sets.precast.WS, {
         neck="Fotia Gorget",
-        body="Odyssean Chestplate",
-        waist="Windbuffet Belt +1",
+		waist="Fotia Belt",
+		ammo="Knobkierrie",
     })
     sets.precast.WS.Insurgency.AM3 = set_combine(sets.precast.WS.Insurgency, {
     })
@@ -322,7 +331,9 @@ function init_gear_sets()
     -- 60% STR / 60% MND
     sets.precast.WS['Cross Reaper'] = set_combine(sets.precast.WS, {
         neck="Fotia Gorget",
-        waist="Windbuffet Belt +1"
+        waist="Fotia Belt",
+		ammo="Knobkierrie",
+		legs="Ratri cuisses"
     })
     sets.precast.WS['Cross Reaper'].AM3 = set_combine(sets.precast.WS['Cross Reaper'], {
         head="Sulevia's Mask +1",
@@ -333,7 +344,7 @@ function init_gear_sets()
     -- ENTROPY
     -- 86-100% INT 
     sets.precast.WS.Entropy = set_combine(sets.precast.WS, {
-        ammo="Ginsen",
+        ammo="Pemphredo Tathlum",
         head="Heathen's Burgonet +1",
         neck="Fotia Gorget",
         body="Fallen's Cuirass +1",
@@ -353,6 +364,7 @@ function init_gear_sets()
     -- 60% STR / MND 
     sets.precast.WS.Quietus = set_combine(sets.precast.WS, {
         neck="Fotia Gorget",
+		ammo="Knobkierrie",
         ear2="Ishvara Earring",
         waist="Windbuffet Belt +1",
     })
