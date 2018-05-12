@@ -91,7 +91,7 @@ function init_gear_sets()
     -- Fast cast sets for spells
  
     sets.precast.FC = {ammo="Impatiens",
-        head="Merlinic Hood",ear1="Etiolation Earring", ear2="Loquacious earring",
+        head="Merlinic Hood",ear1="Etiolation Earring", ear2="Loquacious earring", neck="Baetyl Pendant",
         body="Anhur Robe",hands="Acad. Bracers +2",ring1="Lebeche Ring", ring2="Kishar Ring",
         back="Swith Cape",waist="Channeler's Stone",legs="psycloth lappas",feet="Acad. Loafers +3"}
  
@@ -109,7 +109,7 @@ function init_gear_sets()
     back="Swith Cape",
 }
      
-    sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {neck="Stoicheion Medal",ear1="Barkaro. Earring"})
+    sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear1="Barkaro. Earring"})
  
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {back="Pahtli Cape",ear1="Mendi. earring",body="Vanya Robe",feet="Vanya clogs"})
  
@@ -215,7 +215,7 @@ function init_gear_sets()
          
     sets.midcast.Kaustra.MB = {ammo="Pemphredo Tathlum",
         head="Pixie Hairpin +1",neck="Mizu. Kubikazari",ear1="Barkaro. Earring",ear2="Static earring",
-        body="Jhakri robe +2",hands="Amalric gages",ring1="Locus Ring",ring2="Mujin Band",
+        body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+5','INT+9','"Mag.Atk.Bns."+3',}},hands="Amalric gages",ring1="Locus Ring",ring2="Mujin Band",
         back="Lugh's cape",waist="Eschan Stone",legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+3','Mag. Acc.+9','"Mag.Atk.Bns."+11',}},feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
  
     sets.midcast.Drain = {ammo="Mana ampulla",
@@ -234,9 +234,19 @@ function init_gear_sets()
         back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +2",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
  
     sets.midcast['Elemental Magic'].MB = {ammo="Pemphredo Tathlum",
-        head="Merlinic Hood",neck="Mizu. Kubikazari",ear1="Barkaro. Earring",ear2="Friomisi earring",
-        body="Jhakri robe +2",hands="Amalric gages",ring1="Locus Ring",ring2="Mujin Band",
-        back="Lugh's cape",waist="Eschan Stone",legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+3','Mag. Acc.+9','"Mag.Atk.Bns."+11',}}, feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst dmg.+10%','MND+2','"Mag.Atk.Bns."+14',}},
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+5','INT+9','"Mag.Atk.Bns."+3',}},
+    hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+    legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+3','Mag. Acc.+9','"Mag.Atk.Bns."+11',}},
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}},
+    neck="Mizu. Kubikazari",
+    waist="Eschan Stone",
+    left_ear="Barkaro. Earring",
+    right_ear="Friomisi Earring",
+    left_ring="Locus Ring",
+    right_ring="Mujin Band",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
          
     
 	
@@ -256,9 +266,19 @@ function init_gear_sets()
         back="Lugh's cape",waist="Eschan Stone",legs="jhakri slops +1",feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
      
     sets.midcast.Helix.MB = {ammo="Pemphredo Tathlum",
-        head="Jhakri coronal +2",neck="Mizu. Kubikazari",ear1="Barkaro. Earring",ear2="Static earring",
-        body="Jhakri robe +2",hands="Amalric gages",ring1="Locus Ring",ring2="Mujin Band",
-        back="Lugh's cape",waist="Eschan Stone",legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+3','Mag. Acc.+9','"Mag.Atk.Bns."+11',}},feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}}}
+    head={ name="Merlinic Hood", augments={'Mag. Acc.+18 "Mag.Atk.Bns."+18','Magic burst dmg.+10%','MND+2','"Mag.Atk.Bns."+14',}},
+    body={ name="Merlinic Jubbah", augments={'Mag. Acc.+25 "Mag.Atk.Bns."+25','"Fast Cast"+5','INT+9','"Mag.Atk.Bns."+3',}},
+    hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+    legs={ name="Merlinic Shalwar", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Occult Acumen"+3','Mag. Acc.+9','"Mag.Atk.Bns."+11',}},
+    feet={ name="Merlinic Crackows", augments={'Mag. Acc.+22 "Mag.Atk.Bns."+22','INT+9','Mag. Acc.+9','"Mag.Atk.Bns."+15',}},
+    neck="Mizu. Kubikazari",
+    waist="Eschan Stone",
+    left_ear="Barkaro. Earring",
+    right_ear="Friomisi Earring",
+    left_ring="Locus Ring",
+    right_ring="Mujin Band",
+    back={ name="Lugh's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
     -- Sets to return to when not performing an action.
  
     -- Resting sets
