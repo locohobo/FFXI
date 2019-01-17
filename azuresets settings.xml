@@ -47,6 +47,42 @@
                 <slot16>magic fruit</slot16>
                 <slot17>tenebral crush</slot17>
             </melee>
+            <shadows>
+                <slot01>tail slap</slot01>
+                <slot02>paralyzing triad</slot02>
+                <slot03>fantod</slot03>
+                <slot04>empty thrash</slot04>
+                <slot05>sinker drill</slot05>
+                <slot06>sickle slash</slot06>
+                <slot07>anvil lightning</slot07>
+                <slot08>occultation</slot08>
+                <slot09>sudden lunge</slot09>
+                <slot10>erratic flutter</slot10>
+                <slot11>delta thrust</slot11>
+                <slot12>thrashing assault</slot12>
+                <slot13>heavy strike</slot13>
+                <slot14>barbed crescent</slot14>
+                <slot15>diffusion ray</slot15>
+                <slot16>nat. meditation</slot16>
+                <slot17>magic fruit</slot17>
+                <slot18>quad. continuum</slot18>
+                <slot19>blazing bound</slot19>
+            </shadows>
+            <tank>
+                <slot01>jettatura</slot01>
+                <slot02>geist wall</slot02>
+                <slot03>sheep song</slot03>
+                <slot04>blank gaze</slot04>
+                <slot05>cocoon</slot05>
+                <slot06>power attack</slot06>
+                <slot07>claw cyclone</slot07>
+                <slot08>metallic body</slot08>
+                <slot09>sprout smack</slot09>
+                <slot10>soporific</slot10>
+                <slot11>smite of rage</slot11>
+                <slot12>pollen</slot12>
+                <slot13>magnetite cloud</slot13>
+            </tank>
             <tenzen>
                 <slot01>erratic flutter</slot01>
                 <slot02>thrashing assault</slot02>
