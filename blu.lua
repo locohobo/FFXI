@@ -52,7 +52,7 @@ function get_sets()
 	--Idle Sets--				
 	
 	sets.Idle = {ammo="Hydrocera",
-			head="Rawhide Mask",
+			head="Rawhide Mask", neck="Loricate Torque",
 		    body="Jhakri Robe +2",ring1="Sheltered ring",ring2="Paguroidea Ring",
 			back="Solemnity Cape",waist="Flume Belt",legs="Carmine Cuisses +1"}
 						  					
@@ -65,7 +65,6 @@ function get_sets()
 					head="Adhemar Bonnet +1",
 					body="Adhemar jacket +1",
 					hands="Adhemar Wrist. +1",
-					
 					legs="Samnuha Tights",
 					feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}},
 					neck="Lissome Necklace",
@@ -79,7 +78,7 @@ function get_sets()
 	--Weaponskill Sets-- Cornflower for Requiescat because it saves a spot as it is the ONLY thing I would need to carry Bleating Mantle for...
 	sets.WS = {}
 		
-	sets.WS.Requiescat = {ammo="Floestone",
+	sets.Requiescat = {ammo="Floestone",
 			        head="Jhakri Coronal +2",
 					neck="Fotia Gorget",
 					ear1="Mache Earring",ear2="Brutal Earring",
@@ -93,7 +92,7 @@ function get_sets()
 								  
 							 
 	
-	sets.WS.ChantDuCygne = {ammo="Jukukik Feather",
+	sets.ChantDuCygne = {ammo="Jukukik Feather",
 					head="Adhemar Bonnet +1",
 					neck="Fotia Gorget",
 					ear1="Mache Earring",ear2="Brutal Earring",
@@ -106,16 +105,17 @@ function get_sets()
 					feet={ name="Herculean Boots", augments={'Accuracy+16 Attack+16','"Triple Atk."+2','DEX+8','Attack+11',}}}
 							   
 	
-	  sets.WS.SavageBlade = sets.WS.Expiacion
+	  sets.SavageBlade = sets.Expiacion
 	
-	sets.WS.Expiacion = {ammo="Floestone",
+	sets.Expiacion = {ammo="Floestone",
 			        head="Lilitu Headpiece",
 					neck="Fotia Gorget",
-					ear1="Ishvara Earring",ear2="Brutal Earring",
-				    body="Adhemar Jacket +1",
+					ear1="Ishvara Earring",ear2="Vulcan's Pearl",
+				    body="Assim. Jubbah +3",
 					hands="Jhakri cuffs +2",
-					ring1="Rufescent Ring",ring2="Apate Ring",
-				    back="Bleating Mantle",
+					legs={ name="Herculean Trousers", augments={'Mag. Acc.+4','INT+7','Weapon skill damage +9%','Mag. Acc.+15 "Mag.Atk.Bns."+15',}},
+					ring1="Rufescent Ring",ring2="Ifrit Ring",
+				    back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Crit.hit rate+10',}},
 					waist="Prosilio Belt +1",
 					}
 					
@@ -132,7 +132,7 @@ function get_sets()
 					legs="Amalric Slops",
 					feet="Jhakri Pigaches +2"}
 			
-	sets.WS.CircleBlade = {ammo="Floestone",
+	sets.CircleBlade = {ammo="Floestone",
 			       head="Adhemar Bonnet +1",
 				   neck="Lissome necklace",
 				   ear1="Cessance Earring",ear2="Brutal Earring",
@@ -176,7 +176,7 @@ function get_sets()
 	sets.BlueMagic.INT = {ammo="Pemphredo Tathlum",
 			    head="Jhakri Coronal +2",
 				neck="Sanctity Necklace",
-				ear1="Hermetic Earring",ear2="Friomisi earring",
+				ear1="Regal Earring",ear2="Friomisi earring",
 			    body="Jhakri Robe +2",
 				hands="Jhakri Cuffs +2",
 				ring1="Arvina Ringlet +1",ring2="Shiva Ring",
@@ -251,7 +251,7 @@ function get_sets()
 	sets.BlueMagic.MagicAccuracy = {ammo="Pemphredo Tathlum",
 				    head="Jhakri coronal +2",
 					neck="Sanctity Necklace",
-					ear1="Psystorm earring",ear2="Lifestorm earring",
+					ear1="Gwati Earring",ear2="Digni. Earring",
 				    body="Amalric Doublet",
 					hands="Leyline Gloves",
 					ring1="Arvina Ringlet +1",ring2="Fenrir Ring +1",
@@ -264,7 +264,7 @@ function get_sets()
 					head="Luhlaza Keffiyeh",
 					neck="Incanter's Torque",
 					right_ear="Suppanomimi",left_ear="Ethereal earring",
-					body="Assim. jubbah +1",
+					body="Assim. jubbah +3",
 					hands="Rawhide Gloves",
 					ring1="Lebeche ring",ring2="Fenrir Ring +1",
 					back="Cornflower cape",
@@ -283,7 +283,7 @@ function get_sets()
 					head="Carmine Mask +1",
 					
 					ear1="Loquac. earring",ear2="Earthcry earring",
-					body="Assim. jubbah +1",
+					body="Assim. jubbah +3",
 					
 					ring2="Rufescent Ring",
 					back="Swith cape",
